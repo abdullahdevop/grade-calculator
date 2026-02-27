@@ -14,12 +14,12 @@ def class_average ( scores ) :
     """ Return the average of a list of scores ."""
     total = 0
     for score in scores :
-        total = score # <-- BUG! ( deliberate )
+        total += score # <-- BUG! ( deliberate )
     return total / len ( scores )
 
 def highest_score ( scores ) :
 
-    best = 0 # <-- BUG! ( deliberate )
+    best = scores[0] # <-- BUG! ( deliberate )
     for score in scores :
         if score > best :
             best = score
